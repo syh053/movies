@@ -2,6 +2,8 @@ const express = require("express")
 const { engine } = require("express-handlebars")
 const app = express()
 const port = 3000
+const movies = require("./public/jsons/movies.json").results
+const image_url = "https://movie-list.alphacamp.io/posters/"
 
 
 app.engine('.hbs', engine({ extname: '.hbs' }));
@@ -18,7 +20,7 @@ app.get("/", (req, res) => {
 
 
 app.get("/movies", (req, res) => {
-    res.render("index")
+    res.render("index", { movies, image_url })
 })
 
 
