@@ -4,7 +4,7 @@
         <div class="col-12">
             <form action="/movies">
                 <div class="input-group mb-3">
-                    <input type="text" name="search" class="form-control" placeholder="Enter movie name to search..."
+                    <input type="text" name="search" class="form-control" value="{{keyword}}" placeholder="Enter movie name to search..."
                         aria-label="Movie Name..." aria-describedby="search-button">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="submit" id="search-button">Search</button>
@@ -26,7 +26,7 @@
                         src="{{../image_url}}{{movie.image}}"
                         alt="Card image cap">
                     <div class="card-body movie-item-body">
-                        <h6 class="card-title">Jurassic World: Fallen Kingdom</h6>
+                        <h6 class="card-title">{{movie.title}}</h6>
                     </div>
                 </div>
             </a>
